@@ -71,7 +71,7 @@ public class EventLogs implements Listener {
 	 * Handle saving the player's inventory on death.
 	 * @param event Bukkit damage event
 	 */
-    @EventHandler(priority = EventPriority.MONITOR)
+    @EventHandler(priority = EventPriority.LOWEST)
     private void playerDeath(PlayerDeathEvent event) {
         // Sanity checks to prevent unwanted saves
         if (!ConfigData.isEnabled()) return;
